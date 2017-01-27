@@ -1,0 +1,374 @@
+@import "animation";
+
+// -------- VARIABLE ----------
+
+@RedColor:#ac2925;
+@OrangeColor:#F3C937;
+@boxShadow:0px 0px 3px 0px #cdcdcd;
+
+// -------- MAIN ----------
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #f9f9f9;
+}
+img {
+    max-width: 100%;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+.container-header {
+    position: relative;
+}
+.hero-image {
+    background: #8c8c8c url("../img/coffe.jpg") top left no-repeat;
+    background-size: cover;
+    height: 900px;
+        &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right, #a3a3a3, #987c68);
+        opacity: .4;
+        height: 900px;
+    }
+}
+.menu {
+    position: relative;
+    img {
+        position: relative;
+        width: 160px;
+        top: 30px;
+    }
+    .menu-item {
+        float: right;
+        ul {
+            list-style: none;
+            margin: 50px 0;
+        }
+        li {
+            display: inline-block;
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            &:hover,&:active,&:focus {
+                a {
+                border-bottom: 3px solid @RedColor;
+                }
+            }
+            a {
+                color: #ffffff;
+                font-size: 1.3em;
+                text-decoration: none;
+                border-bottom: 3px solid transparent;
+                transition: border-bottom 0.4s ease;
+            }
+        }
+    }
+}
+.logo {
+    max-width: 160px;
+}
+
+
+.hero-image-txt {
+    position: absolute;
+    top: 200px;
+    left: 8%;
+    color: #ffffff;
+    -webkit-animation: animation 3000ms linear both;
+    animation: animation 3000ms linear both;
+    h1 {
+        font-size: 3em;
+    }
+    h4 {
+        font-size: 1.5em;
+    }
+    button {
+        background: @OrangeColor;
+        border: none;
+        font-size: 2em;
+        padding: 15px 40px;
+        margin-top: 30px;
+        border-radius: 10px;
+    }
+}
+.container-fluid {
+    max-width: 1500px;
+}
+.box {
+    position: relative;
+    top: -90px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: @boxShadow;
+    .box-col {
+        padding: 20px 50px;
+        a {
+            color: @RedColor;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.card {
+    text-align: center;
+    background: #ffffff;
+    box-shadow: @boxShadow;
+    max-width: 500px;
+    margin: 30px auto;
+    transition: all 100ms ease-in;
+    transform: scale(1);
+    &:hover {
+        transform: scale(1.05);
+    }
+    .card-wrap {
+        padding: 20px;
+    }
+    .price {
+        color: @OrangeColor;
+    }
+    .desc {
+        font-weight: 300;
+    }
+    .stars-container {
+        color: #fec66d;
+    }
+}
+table {
+    width: 50%;
+    background: rgba(76, 76, 76, 0.3);
+    td {
+        padding: 4px;
+    }
+    td:nth-of-type(2) {
+        text-align: right;
+    }
+}
+
+
+.location {
+    margin: 90px 0;
+    font-size: 1.5em;
+    background: #ffffff;
+    padding: 3%;
+    box-shadow: @boxShadow;
+}
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; // 16:9
+    height: 350px
+}
+.iframe-container > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.border {
+    width: 30px;
+    background: @OrangeColor;
+    height: 5px;
+    margin: 10px 0 20px;
+}
+.review {
+    .count-review {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 80px;
+        h2 {
+            font-size: 1.4em;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+        span {
+            color: #4cae4c;
+            font-weight: 700;
+        }
+    }
+    .card-review {
+        padding: 40px;
+        border: 1px solid #dedede;
+        background: #ffffff;
+        margin: 10px;
+        border-radius: 5px;
+        position: relative;
+
+        img {
+            border-radius: 60px;
+            display: inline-block;
+        }
+
+        p {
+            color: #828b9a;
+            line-height: 1.45;
+        }
+        .stars-container {
+            color: #fec66d;
+            position: absolute;
+            right: 55px;
+            top: 65px;
+            i {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.call {
+    margin-top: 100px;
+    text-align: center;
+    background: #f4f6fc;
+    padding: 50px 0;
+    h3 {
+        font-size: 2.8em;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+    .call-button {
+        border: none;
+        background: @RedColor;
+        color: #ffffff;
+        padding: 20px 60px;
+        border-radius: 5px;
+        font-size: 2em;
+        width: 300px;
+        margin: 0 auto;
+        max-width: 100%;
+        position: relative;
+        display: inline-block;
+        vertical-align: bottom;
+        a {
+            color: #fff;
+            padding-top: 21px;
+            padding-bottom: 22px;
+            min-width: 200px;
+        }
+    }
+    a:hover, a:visited, a:link, a:active {
+        text-decoration: none;
+    }
+
+}
+footer {
+    padding: 50px 0 50px 0;
+    background: #242936;
+    color: #ffffff;
+    margin: 0 auto;
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    .col-md-6{
+        text-align: center;
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            font-weight: 700;
+        }
+    }
+    .link {
+        h5 {
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+    }
+}
+.copy {
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+}
+@media screen and (max-width: 660px){
+    .hero-image-txt {
+        position: inherit;
+        top: -80px;
+        left: 0;
+        margin: 0 10px;
+    }
+    .menu {
+        top: -25px;
+        img {
+            top: 100px;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+        .menu-item {
+            float: none;
+            ul {
+                padding: 0;
+            }
+            li {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    table {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 420px) {
+    .hero-image-txt {
+        h1 {
+            font-size: 2.5em;
+        }
+        h4 {
+            font-size: 1.3em;
+        }
+        button {
+            font-size: 1.5em;
+            padding: 10px 30px;
+        }
+    }
+    .review .card-review .stars-container {
+        position: inherit;
+        right: inherit;
+        top: inherit;
+    }
+    .call  {
+        h3 {
+        font-size: 1.8em;
+        }
+        .call-button {
+            width: 210px;
+            padding: 20px 40px;
+        }
+    }
+}
+
+
+// TODO Make animation
