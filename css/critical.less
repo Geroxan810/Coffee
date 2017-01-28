@@ -1,0 +1,102 @@
+// -------- VARIABLE ----------
+
+@RedColor:#ac2925;
+@OrangeColor:#F3C937;
+@boxShadow:0px 0px 3px 0px #cdcdcd;
+
+.container-header {
+    position: relative;
+}
+.hero-image {
+    background: #8c8c8c url("../img/coffe.jpg") top left no-repeat;
+    background-size: cover;
+    height: 900px;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right, #a3a3a3, #987c68);
+        opacity: .4;
+        height: 900px;
+    }
+}
+.menu {
+    position: relative;
+    img {
+        position: relative;
+        width: 160px;
+        top: 30px;
+    }
+    .menu-item {
+        float: right;
+        ul {
+            list-style: none;
+            margin: 50px 0;
+        }
+        li {
+            display: inline-block;
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            &:hover,&:active,&:focus {
+                a {
+                    border-bottom: 3px solid @RedColor;
+                }
+            }
+            a {
+                color: #ffffff;
+                font-size: 1.3em;
+                text-decoration: none;
+                border-bottom: 3px solid transparent;
+                transition: border-bottom 0.4s ease;
+            }
+        }
+    }
+}
+.logo {
+    max-width: 160px;
+}
+
+
+.hero-image-txt {
+    position: absolute;
+    top: 200px;
+    left: 8%;
+    color: #ffffff;
+    -webkit-animation: animation 3000ms linear both;
+    animation: animation 3000ms linear both;
+    h1 {
+        font-size: 3em;
+    }
+    h4 {
+        font-size: 1.5em;
+    }
+    button {
+        background: @OrangeColor;
+        border: none;
+        font-size: 2em;
+        padding: 15px 40px;
+        margin-top: 30px;
+        border-radius: 10px;
+    }
+}
+.container-fluid {
+    max-width: 1500px;
+}
+.box {
+    position: relative;
+    top: -90px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: @boxShadow;
+    .box-col {
+        padding: 20px 50px;
+        a {
+            color: @RedColor;
+            text-transform: uppercase;
+        }
+    }
+}
