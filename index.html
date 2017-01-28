@@ -11,12 +11,13 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="css/critical.css" media="bogus">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" media="none" onload="if(media!='all')media='all'">
+    <noscript><link rel="stylesheet" href="css/main.css"></noscript>
     <script src="js/vendor/modernizr-2.8.3.min.js" async></script>
 
 </head>
 <body>
-<link rel="stylesheet" href="css/bootstrap.min.css">
+
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -402,6 +403,8 @@
         <span class="copy">&copy; Ales Mraz</span>
     </div>
 </footer>
+<link rel="stylesheet" href="css/bootstrap.min.css" media="none" onload="if(media!='all')media='all'">
+<noscript><link rel="stylesheet" href="css/main.css"></noscript>>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/main.js" async></script>
 <link href="css/ekko-lightbox.min.css" rel="stylesheet">
