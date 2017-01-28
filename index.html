@@ -10,8 +10,8 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="css/main.css" media="none" onload="if(media!='all')media='all'">
     <script src="js/vendor/modernizr-2.8.3.min.js" async></script>
 
 </head>
@@ -404,12 +404,19 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/main.js" async></script>
-<link href="css/ekko-lightbox.min.css" rel="stylesheet">
+<link href="css/ekko-lightbox.min.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
 <script src="js/bootstrap.min.js" async></script>
 <script src="js/ekko-lightbox.min.js" async></script>
-<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
 
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/ekko-lightbox.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</noscript>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
     (function (b, o, i, l, e, r) {
